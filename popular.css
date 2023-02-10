@@ -1,0 +1,127 @@
+/* popular */
+
+/* card 1 */
+
+#popular-header-h2{
+    margin-left: 100px;
+    font-family: kaushan script,cursive;
+}
+.card {
+    position: relative;
+    width: 78%;
+    margin-top: 70px;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card__image {
+    position: absolute;
+    width: 225px;
+    height: 225px;
+    border-radius: 120px;
+    border: 2px solid black;
+    left: -10%;
+    top: -5%;
+    z-index: 2;
+    transition: all 0.3s ease-out;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3));
+}
+.card__data {
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #ededed;
+    padding-top: calc(100% * 1.18);
+    transition: all 0.3s ease-out 0.1s;
+}
+.card__info {
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+.card__info__h2,.card__info__p {
+    margin: 0;
+}
+.card__info__h2 {
+    font-size: 14px;
+    font-weight: 800;
+}
+.card__info__p {
+    font-size: 10px;
+    line-height: 14px;
+    color: #a2a2a2;
+}
+.card__action {
+    display: grid;
+    grid-template: 30px / 1fr 35px;
+}
+.card__price {
+    color: black;
+    height: 30px;
+    margin: 0;
+    padding: 0 10px 0 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    font-weight: 800;
+}
+.card__add {
+    overflow: hidden;
+    width: 35px;
+    height: 30px;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: #222222;
+    border: none;
+    color: #fff;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease-in;
+}
+.card__add:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+.card__add:active {
+    opacity: 1;
+    transform: scale(0.8);
+}
+.card:hover .card__image {
+    top: -20%;
+}
+.card:hover .card__data {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+/* card 1 */
+
+/* popular */
+
+@media(max-width:768px){
+    #popular-header-h2{
+        transform: translateX(-55px);
+        margin-bottom: 100px;
+    }
+    #news-slider{
+        transform: translateY(7%);
+    }
+    .card__image {
+        width: 100%;
+        height: 70%;
+        border-radius: 50%;
+        transform:translateX(10%);
+        /* top: 5%; */
+    }
+    .card__info__h2{
+        font-size: 16px;
+    }
+    .card__info__p{
+        font-size: 16px;
+        margin-top: 4px;
+    }
+}

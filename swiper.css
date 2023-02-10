@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+#swiper-section{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    position: relative;
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.swiper-container {
+    width: 50%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 320px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+    filter: blur(3px);
+    background-color: #d1ebff;
+    border-radius: 10px;
+}
+.swiper-slide-active{
+    filter: blur(0px);
+    background-color: #fff;
+
+}
+.testimonialBox{
+    position:relative;
+    width: 100%;
+    padding: 40px;
+    padding-top: 90px;
+    color: #999;
+}
+.testimonialBox .swiper-quote{
+    position:absolute;
+    top: 20px;
+    right: 30px;
+    opacity: 0.2;
+}
+.testimonialBox .swiper-details{
+    transform: translateY(-40px);
+    display: flex;
+    width: 100%;
+    margin-left: -20px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.testimonialBox .swiper-details .imgBx{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+.testimonialBox .swiper-details .imgBx .swiper-details-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.testimonialBox .swiper-details .swiper-details-h3{
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #2196f3;
+    line-height: 1.1em;
+    margin-top: -30px;    
+}
+.testimonialBox .swiper-details .swiper-details-h3 span{
+    font-size: 12px;
+    color:  #666;
+}
+.swiper-content{
+    margin-top: 40px;
+}
+.swiper-content > p{
+    color: #666;
+    letter-spacing: 1px;
+    line-height: 25px;
+    font-weight: 700;
+    opacity: 0.6;
+    transform: translateY(-40px);
+
+
+}
+.swiper-container-3d .swiper-slide-shadow-left,
+.swiper-container-3d .swiper-slide-shadow-right{
+    background-image: none;
+}
+
+
+
+@media(max-width : 480px){
+    .testimonialBox {
+        height: 400px;
+    }
+    .swiper-content > p{
+        font-size: 15px;
+    }
+    .swiper-container {
+        width: 80%;
+
+    }
+    #quote-icon{
+        transform: translateX(15px);
+    }
+}
