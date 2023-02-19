@@ -6,9 +6,9 @@ body{
 }
 body, html {
     overflow-x: hidden;
+    scroll-behavior: smooth !important;
 }
 #welcome{
-    /* background-color: red; */
     text-align: center;
     padding-top: 5%;
     padding-bottom: 5%;
@@ -51,11 +51,87 @@ body, html {
     margin-top: 20px;
 }
 
+#menu-bar{
+    display: none;
+    margin-top: 80px;
+    width: 100%;
+}
 
+.toggler{
+    display: none;
+    height: min-content;
+    cursor: pointer;
+    margin-right: 10%;
+}
+.bar{
+    width: 40px;
+    height: 5px;
+    margin-bottom: 10px;
+    background-color: #222;
+    border-radius: 10%;
+    transition: .4s;
+}
+header input{
+    display: none;
+    transform: translateX(25px);
+}
+header input:checked ~ #menu-bar{
+    /* transform: translateY(0%); */
 
-@media(max-width: 480px){
+}
+header input:checked ~ .toggler{
+    transform: rotate(100deg);
+    transition:all .9s ease-in-out ;
+}
+header  input:checked ~ .toggler .bar:nth-child(1){
+    position: absolute;
+    transform: rotate(45deg);
+    
+}
+header  input:checked ~ .toggler .bar:nth-child(2){
+    display: none;    
+}
+header input:checked ~ .toggler .bar:nth-child(3){
+    transform: rotate(-45deg);
+}
+
+@media(max-width: 768px){
     #welcome{
         transform: translateY(25%);
         height: 320px;
     }
+    #menu-bar{
+        display:block;
+        position: fixed;
+        z-index: 1;
+        background-color: #222;
+        /* height: 300px; */
+        transform: translateY(-100%);
+        transition: .4s;
+    }
+    #menu-bar > ul{
+        list-style-type: none;
+    }
+    #menu-bar > ul > a{
+        text-decoration: none;
+    }
+    #menu-bar > ul > a > li{
+        font-size: 25px;
+        color: whitesmoke;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-weight: 600;
+        font-family: kaushan script,cursive;
+        padding: 7px 0px;
+        padding-left: 10px;
+    }
+    #menu-bar > ul > a > li:hover{
+        background-color: rgb(255, 178, 107);;
+    }
+    .toggler{
+        display: grid !important;
+    }
 }
+
+
+
