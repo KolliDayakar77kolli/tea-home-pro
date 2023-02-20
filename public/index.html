@@ -1,5 +1,4 @@
-<!-- This is main file updated 2-->
-<!-- Hosted  -->
+<!-- Almost done-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -96,25 +95,45 @@
       <header>
         <div id="left-header">
           <div id="logo-div">
-            <a href="#"><img id="logopic" src="./p/logopic.png" alt="logopic" /></a>
+            <a href="#home"><img id="logopic" src="./p/logopic.png" alt="logopic" /></a>
           </div>
         </div>
-        <div id="hamburger">
-          <i class="fa fa-bars menu-icon"></i>
-        </div>
+
+        <!-- <div id="hamburger">
+          <a href="#" onclick="openNav()"><i class="fa fa-bars menu-icon"></i></a>
+          <a href="#" onclick="closeNav()"><i class="fa fa-bars menu-icon"></i></a>
+        </div> -->
+
+        <input type="checkbox" id="tog"/>
+        <label class="toggler" for="tog" onclick="openNav()">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </label>
+
         <div id="right-header">
-          <a href="#">About</a>
-          <a href="#">Menu</a>
-          <a href="#">Reviews</a>
-          <a href="#">Blog</a>
-          <button class="btn">Contact</button>
+          <a href="#popular">Popular</a>
+          <a href="#menu">Menu</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#blog">Blog</a>
+          <a href="#contact" class="btn">Contact</a>
         </div>
       </header>
 
+      <div id="menu-bar">
+        <ul>
+          <a href="#popular"><li>Popular</li></a>
+          <a href="#menu"><li>Menu</li></a>
+          <a href="#reviews"><li>Reviews</li></a>
+          <a href="#blog"><li>Blog</li></a>
+          <a href="#contact"><li>Contact</li></a>
+        </ul>        
+      </div>
 
       <main>
 
         <!-- landing section -->
+        <div id="home" style="visibility: none;"></div>
         <div id="landing">
           <div id="landing-left">
             <h1>We Serve The Taste You Love</h1>
@@ -142,12 +161,12 @@
 
         <!-- welcome -->
         <div id="welcome">
-          <img id="elegent" src="./p/Elegentpic.png" />
+          <img id="elegent" src="/public/p/Elegentpic.png" />
           <p>Hello dear</p>
           <h1>Welcome To Tea Home</h1>
           <div id="welcome-shape">
             <br>
-            <img id="elegent2" src="./p/Elegentpic.png" />
+            <img id="elegent2" src="/public/p/Elegentpic.png" />
           </div>
         </div>
         <!-- welcome -->
@@ -156,8 +175,8 @@
         <section class="parallox">
           <div class="parallox-inner">
 
-            <div class="arrow-div">
-              <img src="./p/arrow-up.png" />
+            <div id="popular" class="arrow-div">
+              <img src="/public/p/arrow-up.png" />
             </div>
 
             <h1 id="Taste-the-best">What's popular?</h1>
@@ -179,8 +198,8 @@
         <!-- parallox -->
         <section class="parallox">
           <div class="parallox-inner">
-            <div class="arrow-div">
-              <img src="./p/arrow-up.png" />
+            <div id="menu" class="arrow-div">
+              <img src="/public/p/arrow-up.png" />
             </div>
             <h1 id="Taste-the-best">Taste the best</h1>
             <h1 id="our-menu">Discover Our Menu</h1>
@@ -189,7 +208,7 @@
         <!-- parallox -->
 
         <!-- tab section -->
-        <div class="tabContainer">
+        <div  class="tabContainer">
         <div class="buttonContainer">
             <button onclick="showPanel(0,'rgb(255, 178, 107)')">Tea</button>
             <button onclick="showPanel(1,'rgb(255, 178, 107)')">Milk</button>
@@ -252,11 +271,11 @@
         <!-- tab section -->
 
         <!-- parallox -->
-        <section class="parallox">
+        <section id="blog" class="parallox">
           <div class="parallox-inner-2">
-            <div class="parallox-inner-content">
-              <div id="arrow-div3">
-                <img src="./p/arrow-up.png" />
+            <div  class="parallox-inner-content">
+              <div  id="arrow-div3">
+                <img src="/public/p/arrow-up.png" />
               </div>
               <div class="icon-box">
                 <i id="ele1" class="fa fa-shopping-bag" style="font-size:100px;color:white"></i>
@@ -265,7 +284,7 @@
               </div>
               <div class="icon-box">
                 <i class="fa fa-smile-o" style="font-size:100px;color:white"></i>
-                <h1>500+</h1>
+                <h1>500+</h>
                 <h3>Satisfied Customers</h3>
               </div>
               <div class="icon-box">
@@ -277,8 +296,8 @@
           </div>
         </section>
         <!-- parallox -->
-
-        <h1 style="text-align: center; margin-top: 50px;font-family: kaushan script,cursive;">What Our Customers Say...</h1>
+        
+        <h1 id="reviews" style="text-align: center; margin-top: 50px;font-family: kaushan script,cursive;">What Our Customers Say...</h1>
 
         <!-- swiper -->
         <section id="swiper-section">
@@ -292,14 +311,14 @@
                     <div class="testimonialBox">
                       <div class="swiper-details">
                         <div class="imgBx">
-                          <img class="swiper-details-image" src="./p/cafe.jpg">
+                          <img class="swiper-details-image" src="/public/p/cafe.jpg">
                         </div>
                         <h3 class="swiper-details-h3">Suresh Kumar<br><span style="color: yellowgreen;font-size: 40px;position: absolute; margin-top: 10px;font-weight: 800;">*****</span></h3>
                         <i style="font-size:50px;" id="quote-icon" class="fa fa-quote-right"></i>
 
                       </div>
                         <div class="swiper-content">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas assumenda vitae at qui a corrupti tempore ducimus quisquam. Voluptates, aliquam? Quaerat a nobis vitae. Aliquid doloribus ut harum tempore sit?</p>
+                            <p><b style="font-weight: 800;font-family: kaushan script,cursive;">Excellent Experience</b> - This is the best place in this area to have a sip of tea,coffee & beverages. I visit this place frequently, I love the delicious special shakes. Especially Blueberry shake is superb..!</p>
                         </div>
                     </div>
 
@@ -312,7 +331,7 @@
                   <div class="testimonialBox">
                     <div class="swiper-details">
                       <div class="imgBx">
-                        <img class="swiper-details-image" src="./p/cafe.jpg">
+                        <img class="swiper-details-image" src="/public/p/cafe.jpg">
                       </div>
                       <h3 class="swiper-details-h3">Rahul singh<br><span style="color: yellowgreen;font-size: 40px;position: absolute; margin-top: 10px;font-weight: 800;">*****</span></h3>
                       <i style="font-size:50px;" class="fa fa-quote-right"></i>
@@ -335,9 +354,9 @@
 
       </main>
 
-      <footer>
+      <footer id="contact">
         <div id="footer-logo-div">
-          <img id="footer-logopic" src="./p/logopic.png" alt="logopic" />
+          <a href="#home"><img id="footer-logopic" src="/public/p/logopic.png" alt="logopic" /></a>
         </div>
         <hr>
         <br>
@@ -348,39 +367,39 @@
 
             <div class="footer-links">
               <h1>Quick Links</h1>
-              <p>Menu</p>
-              <p>popular</p>
-              <p>Reviews</p>
-              <p>Blogs</p>
+              <a href="#menu"><p>menu</p></a>
+              <a href="#popular"><p>popular</p></a>
+              <a href="#reviews"><p>reviews</p></a>
+              <a href="#blog"><p>blog</p></a>
             </div>
 
             <div id="footer-address-wrapper">
               <h1>Contact Us</h1>
-              <p>Jyoti Vihar, Burla<br>
-                Sambalpur, Orissa - 768019</p>
-                <p>+91 9861292067,7077806097</p>
+              <p>Tea Home, Gudimellanka<br>
+                National Highway 214, Ap, India</p>
+                <p>+91 7893052768, 9014912224</p>
             </div>
 
             <div id="locate-btn-div">
-              <button id="locate-btn">Locate Us</button>
+              <button id="locate-btn"><a target="_blank" href="https://maps.app.goo.gl/ZRymKCrHcpxtsab46">Locate Us</a></button>
             </div>
 
             <div class="footer-links">
               <h1>Social Media</h1>
-              <p>facebook</p>
-              <p>Twitter</p>
-              <p>Instagram</p>
-              <p>Email</p>
+              <a target="_blank" href="https://www.facebook.com"><p>facebook</p></a>
+              <a target="_blank" href="https://www.twitter.com"><p>Twitter</p></a>
+              <a target="_blank" href="https://www.instagram.com"><p>Instagram</p></a>
+              <a target="_blank" href="mailto:kollidayakar77@gmail.com"><p>Email</p></a>
             </div>
 
           </div>
 
           <div id="social-media">
             <div id="footer-arrow-down">
-              <img src="./p/footer-arrow-down.png" />
+              <img src="/public/p/footer-arrow-down.png" />
             </div>
             <div id="footer-arrow-up">
-              <img src="./p/footer-arrow-up.png" />
+              <img src="/public/p/footer-arrow-up.png" />
             </div>
           </div>
 

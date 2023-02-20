@@ -51,12 +51,16 @@ footer{
     line-height: 23px;
     margin-bottom: 0;
 }
-
-#footer-details > .footer-links > p{
+#footer-details > .footer-links > a{
+    text-decoration: none;
+    color: #fff;
+}
+#footer-details > .footer-links > a > p{
     font-size: 13px;
     font-weight: 800;
     line-height: 20px;
     text-transform: uppercase;
+    margin-bottom: 10px;
 }
 #locate-btn-div{
     margin-left: -430px;
@@ -77,23 +81,19 @@ footer{
     line-height: 49px;
     width: 170px;
     height: 51px;
-    color: #c59d5f;
     border-color: #c59d5f;
     background-color: transparent;
     cursor: pointer;
 }
+#locate-btn > a{
+    color: #c59d5f;
+    text-decoration: none;
+}
 #social-media{
     background-color: #222;
-    /* background-color: cyan; */
-    /* border-top: 1px solid; */
-    /* border-bottom: 1px solid; */
     padding: 3%;
     position: relative;
     top: -100px;
-}
-#social-links{
-    /* display: flex; */
-
 }
 #footer-arrow-down{
     width: 92px;
@@ -109,7 +109,6 @@ footer{
     position: absolute;
     margin-top: 20px;
     left: 46.6%;
-    /* margin-left: -46px; */
 }
 #copy{
     position: relative;
